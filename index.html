@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Banggle Volley Cup 2026</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🏐
+            </div>
+
+            <div class="brand-text">
+
+                <h1>
+                    BANGGLE VOLLEY CUP
+                </h1>
+
+                <p>
+                    TURNAMEN BOLA VOLI 2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         STATUS TURNAMEN
+    ====================================================== -->
+
+    <div class="tournament-status">
+
+        <span class="status-dot"></span>
+
+        TURNAMEN SEDANG BERLANGSUNG
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             PERTANDINGAN BERIKUTNYA
+        ================================================== -->
+
+        <section class="hero-card">
+
+            <span class="label">
+                PERTANDINGAN BERIKUTNYA
+            </span>
+
+
+            <div
+                class="match-date"
+                id="hero-date"
+            >
+                Memuat jadwal...
+            </div>
+
+
+            <div
+                class="match-time"
+                id="hero-time"
+            >
+                --:-- WIB
+            </div>
+
+
+            <div class="teams">
+
+
+                <div class="team">
+
+                    <div class="team-logo">
+                        🏐
+                    </div>
+
+                    <strong id="hero-team-a">
+                        Memuat...
+                    </strong>
+
+                </div>
+
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+                <div class="team">
+
+                    <div class="team-logo">
+                        🏐
+                    </div>
+
+                    <strong id="hero-team-b">
+                        Memuat...
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                class="location"
+                id="hero-location"
+            >
+                📍 Memuat lokasi...
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MENU
+        ================================================== -->
+
+        <section class="menu-grid">
+
+
+            <a
+                href="#jadwal"
+                class="menu-card"
+            >
+
+                <span>📅</span>
+
+                <strong>
+                    Jadwal
+                </strong>
+
+                <small>
+                    Pertandingan
+                </small>
+
+            </a>
+
+
+            <a
+                href="#klasemen"
+                class="menu-card"
+            >
+
+                <span>🏆</span>
+
+                <strong>
+                    Klasemen
+                </strong>
+
+                <small>
+                    Grup A & B
+                </small>
+
+            </a>
+
+
+            <a
+                href="#tim"
+                class="menu-card"
+            >
+
+                <span>👥</span>
+
+                <strong>
+                    Tim
+                </strong>
+
+                <small>
+                    Daftar pemain
+                </small>
+
+            </a>
+
+
+            <a
+                href="#hasil"
+                class="menu-card"
+            >
+
+                <span>🏐</span>
+
+                <strong>
+                    Hasil
+                </strong>
+
+                <small>
+                    Pertandingan
+                </small>
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             JADWAL
+        ================================================== -->
+
+        <section
+            id="jadwal"
+            class="section"
+        >
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        PERTANDINGAN
+                    </span>
+
+                    <h2>
+                        Jadwal
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="date-badge"
+                    id="today-badge"
+                >
+                    --
+                </span>
+
+            </div>
+
+
+            <div id="match-list">
+
+                <div class="empty-card">
+
+                    <div>
+                        🏐
+                    </div>
+
+                    <strong>
+                        Memuat jadwal...
+                    </strong>
+
+                    <p>
+                        Tunggu sebentar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KLASEMEN
+        ================================================== -->
+
+        <section
+            id="klasemen"
+            class="section"
+        >
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        STANDING
+                    </span>
+
+                    <h2>
+                        Klasemen
+                    </h2>
+
+                </div>
+
+
+                <span class="trophy">
+                    🏆
+                </span>
+
+            </div>
+
+
+
+            <!-- GRUP A -->
+
+            <div class="group-title">
+
+                <strong>
+                    GRUP A
+                </strong>
+
+                <small>
+                    5 Tim
+                </small>
+
+            </div>
+
+
+            <div
+                class="standings"
+                id="standings-group-a"
+            >
+
+                <div class="empty-card">
+
+                    <div>
+                        🏐
+                    </div>
+
+                    <strong>
+                        Memuat Grup A...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GRUP B -->
+
+            <div class="group-title">
+
+                <strong>
+                    GRUP B
+                </strong>
+
+                <small>
+                    5 Tim
+                </small>
+
+            </div>
+
+
+            <div
+                class="standings"
+                id="standings-group-b"
+            >
+
+                <div class="empty-card">
+
+                    <div>
+                        🏐
+                    </div>
+
+                    <strong>
+                        Memuat Grup B...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="standings-info">
+
+                <small>
+
+                    M = Main
+                    &nbsp;&nbsp;
+                    W = Menang
+                    &nbsp;&nbsp;
+                    L = Kalah
+                    &nbsp;&nbsp;
+                    PTS = Poin
+
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HASIL
+        ================================================== -->
+
+        <section
+            id="hasil"
+            class="section"
+        >
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        PERTANDINGAN
+                    </span>
+
+                    <h2>
+                        Hasil Terbaru
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div id="result-list">
+
+                <div class="empty-card">
+
+                    <div>
+                        🏐
+                    </div>
+
+                    <strong>
+                        Belum ada hasil pertandingan
+                    </strong>
+
+                    <p>
+                        Hasil pertandingan akan muncul di sini.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEMIFINAL & FINAL
+        ================================================== -->
+
+        <section
+            id="fase-gugur"
+            class="section"
+        >
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        BABAK GUGUR
+                    </span>
+
+                    <h2>
+                        Semi Final
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="semifinal-list"
+                class="knockout-list"
+            >
+
+                <div class="empty-card">
+
+                    <div>
+                        ⚡
+                    </div>
+
+                    <strong>
+                        Menunggu fase grup selesai
+                    </strong>
+
+                    <p>
+                        2 tim teratas dari setiap grup akan masuk semifinal.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FINAL -->
+
+            <div class="section-title final-title">
+
+                <div>
+
+                    <span>
+                        BABAK FINAL
+                    </span>
+
+                    <h2>
+                        🏆 Final
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="final-list"
+                class="knockout-list"
+            >
+
+                <div class="empty-card">
+
+                    <div>
+                        🏆
+                    </div>
+
+                    <strong>
+                        Menunggu semifinal
+                    </strong>
+
+                    <p>
+                        Pemenang semifinal akan bertemu di final.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             TIM
+        ================================================== -->
+
+        <section
+            id="tim"
+            class="section"
+        >
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        PESERTA
+                    </span>
+
+                    <h2>
+                        Daftar Tim
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="team-list"
+                id="team-list"
+            >
+
+                <!-- Diisi JavaScript -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         BOTTOM NAVIGATION
+    ====================================================== -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="#"
+            class="nav-item active"
+        >
+
+            <span>
+                ⌂
+            </span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="#jadwal"
+            class="nav-item"
+        >
+
+            <span>
+                ▣
+            </span>
+
+            <small>
+                Jadwal
+            </small>
+
+        </a>
+
+
+        <a
+            href="#klasemen"
+            class="nav-item"
+        >
+
+            <span>
+                🏆
+            </span>
+
+            <small>
+                Klasemen
+            </small>
+
+        </a>
+
+
+        <a
+            href="#tim"
+            class="nav-item"
+        >
+
+            <span>
+                👥
+            </span>
+
+            <small>
+                Tim
+            </small>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+
+</body>
+
+</html>

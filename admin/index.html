@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Admin - Banggle Volley Cup 2026
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================================================= -->
+    <!-- HEADER -->
+    <!-- ================================================= -->
+
+    <header class="admin-header">
+
+        <div>
+
+            <span class="eyebrow">
+                ADMIN PANEL
+            </span>
+
+            <h1>
+                Banggle Volley Cup
+            </h1>
+
+            <p>
+                Pengelolaan Turnamen 2026
+            </p>
+
+        </div>
+
+        <a
+            href="../index.html"
+            class="btn-outline"
+        >
+            ← Website
+        </a>
+
+    </header>
+
+
+    <!-- ================================================= -->
+    <!-- MAIN -->
+    <!-- ================================================= -->
+
+    <main class="container">
+
+
+        <!-- ================================================= -->
+        <!-- MESSAGE -->
+        <!-- ================================================= -->
+
+        <div
+            id="message"
+            class="message hidden"
+        ></div>
+
+
+        <!-- ================================================= -->
+        <!-- PENGATURAN SLOT -->
+        <!-- ================================================= -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Jadwal Pertandingan
+                        </h2>
+
+                        <p>
+                            Tentukan sendiri tim yang bertanding.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>
+                    🏐 Mode Manual
+                </strong>
+
+                <span>
+                    Kamu bebas menentukan pasangan pertandingan,
+                    tanggal, jam, dan lokasi.
+                </span>
+
+            </div>
+
+
+            <div class="schedule-actions">
+
+                <button
+                    id="createSlotsBtn"
+                    class="btn-primary"
+                >
+                    ➕ BUAT 20 SLOT PERTANDINGAN
+                </button>
+
+            </div>
+
+
+            <div class="slot-summary">
+
+                <div>
+
+                    <strong id="totalSlots">
+                        20
+                    </strong>
+
+                    <span>
+                        Total Slot
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="filledSlots">
+                        0
+                    </strong>
+
+                    <span>
+                        Sudah Diisi
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="emptySlots">
+                        20
+                    </strong>
+
+                    <span>
+                        Belum Diisi
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- DAFTAR PERTANDINGAN -->
+        <!-- ================================================= -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Daftar Pertandingan
+                        </h2>
+
+                        <p>
+                            Klik edit untuk menentukan tim dan jadwal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="filter-row">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    Semua
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="A"
+                >
+                    Grup A
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="B"
+                >
+                    Grup B
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="scheduled"
+                >
+                    Belum Main
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="finished"
+                >
+                    Selesai
+                </button>
+
+            </div>
+
+
+            <div id="matchesContainer">
+
+                <div class="loading">
+                    Memuat slot pertandingan...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- ALUR -->
+        <!-- ================================================= -->
+
+        <section class="card info-card">
+
+            <h2>
+                🏆 Alur Turnamen
+            </h2>
+
+            <div class="flow">
+
+                <div>
+
+                    <strong>
+                        10 Tim
+                    </strong>
+
+                    <span>
+                        2 Grup
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        20 Match
+                    </strong>
+
+                    <span>
+                        Fase Grup
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        4 Tim
+                    </strong>
+
+                    <span>
+                        Semifinal
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        2 Tim
+                    </strong>
+
+                    <span>
+                        Final
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================================= -->
+    <!-- MODAL EDIT -->
+    <!-- ================================================= -->
+
+    <div
+        id="editModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-box">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        PERTANDINGAN
+                    </span>
+
+                    <h2 id="modalTitle">
+                        Match 01
+                    </h2>
+
+                </div>
+
+
+                <button
+                    id="closeModal"
+                    class="close-btn"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="editForm">
+
+
+                <input
+                    type="hidden"
+                    id="editId"
+                >
+
+
+                <!-- GRUP -->
+
+                <div class="form-group">
+
+                    <label>
+                        Grup
+                    </label>
+
+                    <select
+                        id="editGroup"
+                        required
+                    >
+
+                        <option value="">
+                            Pilih Grup
+                        </option>
+
+                        <option value="A">
+                            Grup A
+                        </option>
+
+                        <option value="B">
+                            Grup B
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TIM -->
+
+                <div class="team-select-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Tim A
+                        </label>
+
+                        <select
+                            id="editTeamA"
+                            required
+                            disabled
+                        >
+
+                            <option value="">
+                                Pilih grup terlebih dahulu
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="vs-box">
+                        VS
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Tim B
+                        </label>
+
+                        <select
+                            id="editTeamB"
+                            required
+                            disabled
+                        >
+
+                            <option value="">
+                                Pilih grup terlebih dahulu
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JADWAL -->
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Tanggal
+                        </label>
+
+                        <input
+                            type="date"
+                            id="editDate"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Jam
+                        </label>
+
+                        <input
+                            type="time"
+                            id="editTime"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Lokasi
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editLocation"
+                            placeholder="Contoh: Lapangan Banggle"
+                        >
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Status
+                        </label>
+
+                        <select id="editStatus">
+
+                            <option value="scheduled">
+                                Belum Dimulai
+                            </option>
+
+                            <option value="live">
+                                Sedang Berlangsung
+                            </option>
+
+                            <option value="finished">
+                                Selesai
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SKOR -->
+
+                    <div class="score-box">
+
+                        <label>
+                            Skor Set
+                        </label>
+
+                        <div class="score-inputs">
+
+                            <input
+                                type="number"
+                                id="editScoreA"
+                                min="0"
+                                max="3"
+                                placeholder="0"
+                            >
+
+                            <span>
+                                -
+                            </span>
+
+                            <input
+                                type="number"
+                                id="editScoreB"
+                                min="0"
+                                max="3"
+                                placeholder="0"
+                            >
+
+                        </div>
+
+                        <small>
+                            Contoh: 3 - 1
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancelBtn"
+                        class="btn-secondary"
+                    >
+                        Batal
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        💾 Simpan Pertandingan
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="admin.js"
+    ></script>
+
+</body>
+
+</html>
